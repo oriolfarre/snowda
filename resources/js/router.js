@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 import Home from './pages/Home'
 import Register from './pages/Register'
 import Login from './pages/Login'
+import AddEvent from './pages/AddEvent'
 import Dashboard from './pages/user/Dashboard'
 import AdminDashboard from './pages/admin/Dashboard'
 
@@ -31,6 +32,14 @@ const routes = [
     component: Login,
     meta: {
       auth: false
+    }
+  },
+  {
+    path: '/event',
+    name: 'addevent',
+    component: AddEvent,
+    meta: {
+      auth: true
     }
   },
 

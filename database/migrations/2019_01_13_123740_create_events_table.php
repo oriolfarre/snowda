@@ -18,7 +18,7 @@ class CreateEventsTable extends Migration
             $table->integer('user_id');
             $table->string('title');
             $table->longText('description');
-            $table->string('main_image');
+            $table->string('main_image')->nullable();
             $table->timestamps();
         });
     }

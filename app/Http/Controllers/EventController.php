@@ -25,7 +25,7 @@ class EventController extends Controller
        /* $v = Validator::make($request->all(), [
             'email' => 'required|email|unique:users',
             'password'  => 'required|min:3|confirmed',
-        ]);*/
+        ]);
 
         if ($v->fails())
         {
@@ -33,14 +33,10 @@ class EventController extends Controller
                 'status' => 'error',
                 'errors' => $v->errors()
             ], 422);
-        }
+        }*/
 
-        $event = new Event;
-        $event->title = $request->title;
-        $event->scription = $request->description;
-        $event->main_image = $request->description;
-        $event->save();
-
+        $event = $this->repository->create( $request::all() );
+        
         return response()->json(['status' => 'success'], 200);
     }
 
