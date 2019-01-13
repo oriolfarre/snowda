@@ -1,18 +1,30 @@
 <template>
+
     <div class="container">
         <div class="card card-default">
             <div class="card-header">Admin Dashboard</div>
             <div class="card-body">
-                Bienvenue sur votre dashboard administrateur
+                Bienvenido al panel de administración
+            </div>
+        </div>
+        <div class="card card-default">
+            <div class="card-header">Lista de usuarios</div>
+            <div class="card-body">
+                <userList></userList>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+
+  import userList from '../../components/user-list.vue'
   export default {
     mounted() {
       //
+    },
+    components: {
+      userList
     }
   }
 </script>
